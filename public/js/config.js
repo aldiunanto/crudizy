@@ -1,5 +1,6 @@
 CONFIG = {
 
-	baseUrl	: 'http://aldiunanto/studycase/crudizy/'
+	/* example: http://domain.com/ */
+	baseUrl	: ''
 
 }
