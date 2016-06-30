@@ -14,9 +14,9 @@
 				<tr>
 					<td class="sidebar">
 						<ul>
-							<li><a href="#/page1">Home</a></li>
-							<li><a href="#/page2">About</a></li>
-							<li><a href="#/page3">Contact</a></li>
+							<li><a href="#/page1">Page 1</a></li>
+							<li><a href="#/page2">Page 2</a></li>
+							<li><a href="#/page3">Page 3</a></li>
 						</ul>
 					</td>
 					<td class="content">
