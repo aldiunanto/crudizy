@@ -1,0 +1,24 @@
+{
+    "name": "aldiunanto/crudizy",
+    "type": "library",
+    "description": "A Javascript library which make your web app faster.",
+    "keywords": ["crudizy","javascript"],
+    "homepage": "https://github.com/aldiunanto/crudizy",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Aldi Unanto",
+            "email": "aldiunanto@yahoo.com",
+            "homepage": "http://aldiunanto.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "Monolog": "src"
+        }
+    }
+}
