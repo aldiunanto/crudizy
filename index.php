@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>A Sample Web App Using CRUDIZY</title>
+		<title>A Sample Web App Using CRUDIZY.</title>
 		<link rel="stylesheet" href="public/css/style.css" />
 		<script type="text/javascript" src="public/js/vendor/jquery-1.10.min.js"></script>
 		<script type="text/javascript" src="public/js/config.js"></script>
