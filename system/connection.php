@@ -9,15 +9,23 @@ try{
 	echo 'Connection failed: ' . $e->getMessage();
 }
 
+$DB = new DB($conn);
 class DB{
 
-	private $_db;
+	static $_db;
 
-	private function __construct($conn){
-		$this->_db = $conn;
+	public function __construct($conn){
+		self::$_db = $conn;
 	}
-	public function store(){
-		return 'this is Query.store';
+	public function store($tbl, $args){
+		$mark = ''; $vals = [];
+		foreach($args as $k => $v){
+			$mark .= '?,';
+			$vals[] = $v;
+		}
+
+		$q = self::$_db->prepare('INSERT INTO '. $tbl . '(' . implode(',', array_keys($args)) . ') VALUES(' . substr($mark, 0, (strlen($mark) - 1)) . ')');
+		return $q->execute($vals);
 	}
 
 }
