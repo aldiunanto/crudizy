@@ -8,3 +8,16 @@ try{
 }catch (PDOException $e){
 	echo 'Connection failed: ' . $e->getMessage();
 }
+
+class DB{
+
+	private $_db;
+
+	private function __construct($conn){
+		$this->_db = $conn;
+	}
+	public function store(){
+		return 'this is Query.store';
+	}
+
+}
