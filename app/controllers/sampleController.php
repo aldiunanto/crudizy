@@ -1,11 +1,7 @@
 <?php namespace app\controllers;
 
+use DB;
+
 class sampleController {
-
-	private $db;
-
-	public function __construct($conn){
-		$this->db = $conn;
-	}
 
 }
