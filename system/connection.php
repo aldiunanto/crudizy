@@ -55,5 +55,14 @@ class DB{
 	public function get($tbl){
 		return self::$_db->query('SELECT ' . self::$select . ' FROM ' . $tbl . self::$join . (self::$where == '' ? null : ' WHERE ' . self::$where));
 	}
+	public function save($tbl, $set){
+		$o = '';
+		foreach($set as $k => $v){
+			$o .= $k . '="' . $v . '",';
+		}
+
+		$q = self::$_db->prepare('UPDATE ' . $tbl . ' SET ' . substr($o, 0, (strlen($o) - 1)) . (self::$where == '' ? null : ' WHERE ' . self::$where));
+		return $q->execute();
+	}
 
 }
