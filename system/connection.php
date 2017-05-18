@@ -64,5 +64,9 @@ class DB{
 		$q = self::$_db->prepare('UPDATE ' . $tbl . ' SET ' . substr($o, 0, (strlen($o) - 1)) . (self::$where == '' ? null : ' WHERE ' . self::$where));
 		return $q->execute();
 	}
+	public function delete($tbl){
+		$q = self::$_db->prepare('DELETE FROM ' . $tbl . (self::$where == '' ? null : ' WHERE ' . self::$where));
+		return $q->execute();
+	}
 
 }
